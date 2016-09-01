@@ -16,6 +16,6 @@ processData: // 要求为Boolean类型的参数，默认为true。默认情况�
 
 dataType: 'json' // 预期服务器返回类型    ，如果不指定，jQuery 将自动根据 HTTP 包 MIME 信息来智能判断，
 cache: false //cache设置为false，将不会从浏览器缓存中加载请求信息。
-timeout: 要求为Number类型的参数，设置请求超时时间（毫秒）。此设置将覆盖$.ajaxSetup()方法的全局设置。
+timeout: 要求为Number类型的参数，设置请求超时时间（毫秒）。此设置将覆盖$.ajaxSetup()方法的全局设置。一般设置为30000
 
 
