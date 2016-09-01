@@ -1,29 +1,21 @@
 contentType:
-1.$.ajax------ contentType: 'application/json;charset=UTF-8' (jsonÀàĞÍ)
-  Ô­Éújs·µ»ØµÄÓ¦ÊÇ×Ö·ûÀàĞÍxhr.responseText
-2.±íµ¥formÄ¬ÈÏÀàĞÍ£º      enctype="application/x-www-form-urlencoded"
-  ±íµ¥¶ş½øÖÆÎÄ¼ş´«ÊäÀàĞÍ£ºenctype="multipart/form-data"
+1.$.ajax------ contentType: 'application/json;charset=UTF-8' (jsonç±»å‹)
+  åŸç”Ÿjsè¿”å›çš„åº”æ˜¯å­—ç¬¦ç±»å‹xhr.responseText
+2.è¡¨å•formé»˜è®¤ç±»å‹ï¼š      enctype="application/x-www-form-urlencoded"
+  è¡¨å•äºŒè¿›åˆ¶æ–‡ä»¶ä¼ è¾“ç±»å‹ï¼šenctype="multipart/form-data"
 
 
-JSON·½Ê½£º
+JSONæ–¹å¼ï¼š
 data: JSON.stringify(param),    
 contentType: 'application/json;charset=UTF-8',
 
-contentType 
-// ²»Ğ´£¬Ä¬ÈÏÓĞÉèÖÃ´«ÊäÀàĞÍ
-// ÒªÇóÎªStringÀàĞÍµÄ²ÎÊı£¬µ±·¢ËÍĞÅÏ¢ÖÁ·şÎñÆ÷Ê±£¬ÄÚÈİ±àÂëÀàĞÍÄ¬ÈÏÎª"application/x-www-form-urlencoded"¡£
+contentType  // ä¸å†™é»˜è®¤æœ‰ä¼ è¾“ç±»å‹,å†…å®¹ç¼–ç ç±»å‹é»˜è®¤ä¸º"application/x-www-form-urlencoded"
+contentType: false // å‘Šè¯‰ jQuery åˆ«è®¾ç½®å†…å®¹ç±»å‹ï¼Œç„¶åä¼ çš„dataæ˜¯ä»€ä¹ˆç±»å‹å°±æ˜¯ä»€ä¹ˆç±»å‹
 
-contentType: false // ¸æËß jQuery ±ğÉèÖÃÄÚÈİÀàĞÍ
+processData: // è¦æ±‚ä¸ºBooleanç±»å‹çš„å‚æ•°ï¼Œé»˜è®¤ä¸ºtrueã€‚é»˜è®¤æƒ…å†µä¸‹ï¼Œå‘é€çš„æ•°æ®å°†è¢«è½¬æ¢ä¸ºå¯¹è±¡ï¼ˆä»æŠ€æœ¯è§’åº¦æ¥è®²å¹¶éå­—ç¬¦ä¸²ï¼‰ä»¥é…åˆé»˜è®¤å†…å®¹ç±»å‹,"application/x-www-form-urlencoded"ã€‚å¦‚æœè¦å‘é€DOMæ ‘ä¿¡æ¯æˆ–è€…å…¶ä»–ä¸å¸Œæœ›è½¬æ¢çš„ä¿¡æ¯ï¼Œè¯·è®¾ç½®ä¸ºfalseã€‚
 
-È»ºó´«µÄdataÊÇÊ²Ã´ÀàĞÍ¾ÍÊÇÊ²Ã´ÀàĞÍ
-
-processData£º
-// ÒªÇóÎªBooleanÀàĞÍµÄ²ÎÊı£¬Ä¬ÈÏÎªtrue¡£Ä¬ÈÏÇé¿öÏÂ£¬·¢ËÍµÄÊı¾İ½«±»×ª»»Îª¶ÔÏó£¨´Ó¼¼Êõ½Ç¶ÈÀ´½²²¢·Ç×Ö·û´®£©ÒÔÅäºÏÄ¬ÈÏÄÚÈİÀàĞÍ"application/x-www-form-urlencoded"¡£Èç¹ûÒª·¢ËÍDOMÊ÷ĞÅÏ¢»òÕßÆäËû²»Ï£Íû×ª»»µÄĞÅÏ¢£¬ÇëÉèÖÃÎªfalse¡£
-
-dataType: 'json' // Ô¤ÆÚ·şÎñÆ÷·µ»ØÀàĞÍ    £¬Èç¹û²»Ö¸¶¨£¬jQuery ½«×Ô¶¯¸ù¾İ HTTP °ü MIME ĞÅÏ¢À´ÖÇÄÜÅĞ¶Ï£¬
-
-cache: false //cacheÉèÖÃÎªfalse£¬½«²»»á´Óä¯ÀÀÆ÷»º´æÖĞ¼ÓÔØÇëÇóĞÅÏ¢¡£
-
-timeout: ÒªÇóÎªNumberÀàĞÍµÄ²ÎÊı£¬ÉèÖÃÇëÇó³¬Ê±Ê±¼ä£¨ºÁÃë£©¡£´ËÉèÖÃ½«¸²¸Ç$.ajaxSetup()·½·¨µÄÈ«¾ÖÉèÖÃ¡£
+dataType: 'json' // é¢„æœŸæœåŠ¡å™¨è¿”å›ç±»å‹    ï¼Œå¦‚æœä¸æŒ‡å®šï¼ŒjQuery å°†è‡ªåŠ¨æ ¹æ® HTTP åŒ… MIME ä¿¡æ¯æ¥æ™ºèƒ½åˆ¤æ–­ï¼Œ
+cache: false //cacheè®¾ç½®ä¸ºfalseï¼Œå°†ä¸ä¼šä»æµè§ˆå™¨ç¼“å­˜ä¸­åŠ è½½è¯·æ±‚ä¿¡æ¯ã€‚
+timeout: è¦æ±‚ä¸ºNumberç±»å‹çš„å‚æ•°ï¼Œè®¾ç½®è¯·æ±‚è¶…æ—¶æ—¶é—´ï¼ˆæ¯«ç§’ï¼‰ã€‚æ­¤è®¾ç½®å°†è¦†ç›–$.ajaxSetup()æ–¹æ³•çš„å…¨å±€è®¾ç½®ã€‚
 
 
