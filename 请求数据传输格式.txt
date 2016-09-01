@@ -1,0 +1,29 @@
+contentType:
+1.$.ajax------ contentType: 'application/json;charset=UTF-8' (json类型)
+  原生js返回的应是字符类型xhr.responseText
+2.表单form默认类型：      enctype="application/x-www-form-urlencoded"
+  表单二进制文件传输类型：enctype="multipart/form-data"
+
+
+JSON方式：
+data: JSON.stringify(param),    
+contentType: 'application/json;charset=UTF-8',
+
+contentType 
+// 不写，默认有设置传输类型
+// 要求为String类型的参数，当发送信息至服务器时，内容编码类型默认为"application/x-www-form-urlencoded"。
+
+contentType: false // 告诉 jQuery 别设置内容类型
+
+然后传的data是什么类型就是什么类型
+
+processData：
+// 要求为Boolean类型的参数，默认为true。默认情况下，发送的数据将被转换为对象（从技术角度来讲并非字符串）以配合默认内容类型"application/x-www-form-urlencoded"。如果要发送DOM树信息或者其他不希望转换的信息，请设置为false。
+
+dataType: 'json' // 预期服务器返回类型    ，如果不指定，jQuery 将自动根据 HTTP 包 MIME 信息来智能判断，
+
+cache: false //cache设置为false，将不会从浏览器缓存中加载请求信息。
+
+timeout: 要求为Number类型的参数，设置请求超时时间（毫秒）。此设置将覆盖$.ajaxSetup()方法的全局设置。
+
+
